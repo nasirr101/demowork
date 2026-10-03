@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md. Nasir Uddin — Frontend Developer</title>
+<meta name="description" content="Portfolio of Md. Nasir Uddin, a frontend developer building interactive, modern web experiences.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- decorative particle canvas, sits behind all content -->
+<canvas id="canvas" aria-hidden="true"></canvas>
+
+<!-- skip link for keyboard/screen reader users -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#home" class="logo" aria-label="Home">N<span class="dot">.</span></a>
+
+    <nav class="nav" id="nav">
+      <ul class="nav-list">
+        <li><a href="#home" class="nav-link active" data-nav>Home</a></li>
+        <li><a href="#about" class="nav-link" data-nav>About</a></li>
+        <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+        <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="#contact" class="btn btn-primary btn-small nav-cta">Let's talk</a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">// hi, my name is</p>
+        <h1 class="hero-title">
+          Md. Nasir <span class="accent-text">Uddin</span>
+        </h1>
+        <p class="hero-role">
+          I'm a <span class="typed-role" id="typed-role">Frontend Worker</span><span class="cursor">|</span>
+        </p>
+        <p class="hero-desc">
+          I build modern, interactive websites with HTML, CSS, JavaScript and
+          a healthy obsession with the Canvas API. I like interfaces that feel
+          alive — smooth motion, tactile feedback, small delightful details.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-code"></i> View Work
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-regular fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="ghost-wrap" id="ghost">
+          <svg class="ghost-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <path class="ghost-body" d="M20 130 C20 60 55 20 100 20 C145 20 180 60 180 130 L180 190 C180 200 170 205 162 197 L150 185 L135 200 C130 205 122 205 117 200 L100 185 L83 200 C78 205 70 205 65 200 L50 185 L38 197 C30 205 20 200 20 190 Z"/>
+            <circle class="ghost-eye" cx="75" cy="105" r="9"/>
+            <circle class="ghost-eye" cx="125" cy="105" r="9"/>
+            <path class="ghost-mouth" d="M85 135 Q100 148 115 135" />
+          </svg>
+        </div>
+        <div class="code-chip chip-1">&lt;/&gt;</div>
+        <div class="code-chip chip-2">{ }</div>
+        <div class="code-chip chip-3">const</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <p class="section-eyebrow">// about</p>
+      <h2 class="section-title">A little about me</h2>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>
+            I'm a frontend developer who enjoys turning ideas into interfaces
+            people actually enjoy using. My focus is on interaction design —
+            the small animations, transitions and responses that make a page
+            feel like software instead of a static document.
+          </p>
+          <p>
+            Outside of layout and components, I like experimenting with the
+            HTML5 Canvas API and building small generative / particle effects
+            like the one following your cursor right now.
+          </p>
+        </div>
+
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <span class="stat-number" data-count="20">0</span>
+            <span class="stat-suffix">+</span>
+            <p class="stat-label">Projects built</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-count="2">0</span>
+            <span class="stat-suffix">yrs</span>
+            <p class="stat-label">Writing frontend code</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-count="100">0</span>
+            <span class="stat-suffix">%</span>
+            <p class="stat-label">Caffeinated while coding</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section section-alt" id="projects">
+    <div class="section-inner">
+      <p class="section-eyebrow">// projects</p>
+      <h2 class="section-title">Things I've built</h2>
+      <p class="section-sub">A few sample pieces — swap these for your own work.</p>
+
+      <div class="project-grid">
+
+        <article class="project-card reveal" data-tilt>
+          <div class="project-thumb pt-1"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div class="project-body">
+            <h3>Interactive Particle Canvas</h3>
+            <p>A cursor-reactive particle system built with the HTML5 Canvas API — connecting nearby particles with dynamic, color-cycling lines.</p>
+            <div class="tags">
+              <span>JavaScript</span><span>Canvas API</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tilt>
+          <div class="project-thumb pt-2"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="project-body">
+            <h3>E-commerce UI Kit</h3>
+            <p>A fully responsive storefront layout with cart drawer, filters and checkout flow, built mobile-first with vanilla CSS Grid.</p>
+            <div class="tags">
+              <span>HTML</span><span>CSS Grid</span><span>JS</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tilt>
+          <div class="project-thumb pt-3"><i class="fa-solid fa-list-check"></i></div>
+          <div class="project-body">
+            <h3>Task Board App</h3>
+            <p>A drag-and-drop kanban board with local persistence, keyboard support and smooth reordering animations.</p>
+            <div class="tags">
+              <span>JavaScript</span><span>Drag &amp; Drop</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <p class="section-eyebrow">// skills</p>
+      <h2 class="section-title">What I work with</h2>
+
+      <div class="skills-grid reveal">
+        <div class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</div>
+        <div class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+        <div class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</div>
+        <div class="skill-pill"><i class="fa-brands fa-react"></i> React</div>
+        <div class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git</div>
+        <div class="skill-pill"><i class="fa-solid fa-shapes"></i> Canvas API</div>
+        <div class="skill-pill"><i class="fa-brands fa-figma"></i> Figma</div>
+        <div class="skill-pill"><i class="fa-solid fa-mobile-screen"></i> Responsive Design</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-alt" id="contact">
+    <div class="section-inner contact-inner">
+      <p class="section-eyebrow">// contact</p>
+      <h2 class="section-title">Let's build something</h2>
+      <p class="section-sub">Have a project in mind, or just want to say hi? My inbox is open.</p>
+
+      <div class="contact-grid">
+        <form class="contact-form reveal" id="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-regular fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-side reveal">
+          <a class="contact-item" href="mailto:hello@nasiruddin.dev">
+            <i class="fa-regular fa-envelope"></i> hello@nasiruddin.dev
+          </a>
+          <a class="contact-item" href="https://github.com/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i> github.com/nasiruddin
+          </a>
+          <a class="contact-item" href="https://linkedin.com/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i> linkedin.com/in/nasiruddin
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Md. Nasir Uddin. Built with HTML, CSS &amp; a little canvas magic.</p>
+</footer>
+
+<script src="particles.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
